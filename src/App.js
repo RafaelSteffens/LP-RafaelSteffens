@@ -11,9 +11,8 @@ import Contatos from './contatos/Contatos';
 import SectionWrapper from './components/SectionWrapper';
 
 function App() {
-  
-  // ENTREVISTA HACKED =========================
-  alert("HACKED, ME CONTRATE PARA LIBERAR O COMPUTADOR")
+
+
 
   const [whiteMode, setWhiteMode] = useState(false);
   useEffect(() => {
