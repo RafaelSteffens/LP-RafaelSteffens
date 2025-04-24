@@ -1,0 +1,19 @@
+.section-wrapper {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: opacity, transform;
+  }
+  
+  /* Quando entra na tela */
+  .section-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Quando sai da tela */
+  .section-wrapper.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  

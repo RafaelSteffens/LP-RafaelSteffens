@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Variáveis globais para o tema claro e escuro */
+:root {
+    --bg-color: #0D1B2A; /* Fundo principal - Azul Petróleo */
+    --bg-dark: #111111; /* Cor de fundo escuro */
+    --bg-dark-alt: #1F2937; /* Cor de fundo alternativo escuro */
+    --text-color: #ffffff; /* Cor do texto claro */
+    --text-light: #cccccc; /* Texto claro para descrições */
+    --accent-color: #38BDF8; /* Cor de destaque - Ciano */
+    --border-color: #2c2c2c; /* Cor das bordas */
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .white-mode {
+    --bg-color: #ffffff; /* Fundo claro */
+    --text-color: #000000; /* Texto escuro */
+    --accent-color: #38BDF8; /* Ciano para destacar */
+    --bg-dark: #f0f0f0; /* Fundo escuro no modo claro */
+    --bg-dark-alt: #dcdcdc; /* Fundo alternativo claro */
+    --text-light: #333333; /* Texto claro no fundo branco */
+    --border-color: #cccccc; /* Cor das bordas no modo claro */
   }
-  to {
-    transform: rotate(360deg);
+  
+
+
+
+  /* Para a tela de desktop, mais espaço e tamanho no botão */
+@media (min-width: 768px) {
+    div.fixed {
+      top: 2rem; /* Aumenta a distância do topo */
+      right: 2rem; /* Aumenta a distância da direita */
+    }
+  
+    .switch {
+      width: 100px; /* Aumenta o tamanho do switch */
+      height: 50px;
+    }
+  
+    .switch .circle {
+      width: 35px;
+      height: 35px;
+    }
   }
-}
+  

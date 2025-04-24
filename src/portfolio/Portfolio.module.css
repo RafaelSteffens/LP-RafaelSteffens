@@ -1,0 +1,151 @@
+.section {
+  background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark-alt));
+  padding: 4rem 2rem;
+  min-height: 44vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background: rgba(20, 20, 30, 0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  color: var(--text-light);
+  padding: 2rem;
+  width: 320px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.05);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  z-index: 0;
+  transition: background 0.3s;
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.cardTitulo {
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px var(--accent-color);
+}
+
+.card:hover {
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: var(--bg-dark);
+  border: 1px solid var(--accent-color);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  color: var(--text-light);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.modal p,
+.modal ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.modal li {
+  margin-bottom: 0.5rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  color: var(--accent-color);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%;
+      height: 180px;
+  }
+
+  .cardTitulo {
+      font-size: 1.2rem;
+  }
+}
