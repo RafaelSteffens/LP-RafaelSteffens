@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './Inicial.module.css';
 
-
-
-
 const HeroSection = () => {
   const fullText = 'Olá, eu sou o Rafael Steffens ;) ';
   const [displayedText, setDisplayedText] = useState('');
@@ -43,15 +40,6 @@ const HeroSection = () => {
         <p>Sou dev fullstack, como posso te ajudar?</p>
         <br />
         <div className={styles.actions}>
-          <motion.a
-            whileHover={{ scale: 1.05, backgroundColor: "#00ffff", color: "#000" }}
-            whileTap={{ scale: 0.95 }}
-            href="CurriculoRafaelSteffens.pdf"
-            download="CurriculoRafaelSteffens"
-            className={styles.button}
-          >
-            Baixar Currículo
-          </motion.a>
 
           <motion.a
             whileHover={{ scale: 1.05, backgroundColor: "#00ffff", color: "#000" }}

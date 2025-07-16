@@ -39,7 +39,7 @@ function App() {
           style={{
             width: '80px',
             height: '40px',
-            backgroundColor: whiteMode ? '#ffffff' : 'var(--bg-color)', // inversão de cor
+            backgroundColor: whiteMode ? '#ffffff' : 'var(--bg-color)',
             borderRadius: '50px',
             display: 'flex',
             alignItems: 'center',
@@ -48,9 +48,8 @@ function App() {
             boxShadow: `0 2px 10px ${whiteMode ? 'rgba(0,0,0,0.2)' : 'rgba(255,255,255,0.4)'}`,
           }}
         >
-          {/* O botão interno que desliza */}
           <motion.div
-            animate={{ x: whiteMode ? 40 : 0 }} // move o botão para a direita se o modo for "whiteMode"
+            animate={{ x: whiteMode ? 40 : 0 }} 
             transition={{ type: 'spring', stiffness: 300 }}
             style={{
               width: '30px',

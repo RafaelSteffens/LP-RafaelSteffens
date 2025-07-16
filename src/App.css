@@ -20,16 +20,14 @@
   }
   
 
-
-  /* Para a tela de desktop, mais espaço e tamanho no botão */
 @media (min-width: 768px) {
     div.fixed {
-      top: 2rem; /* Aumenta a distância do topo */
-      right: 2rem; /* Aumenta a distância da direita */
+      top: 2rem; 
+      right: 2rem; 
     }
   
     .switch {
-      width: 100px; /* Aumenta o tamanho do switch */
+      width: 100px; 
       height: 50px;
     }
   
