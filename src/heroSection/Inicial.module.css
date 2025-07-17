@@ -10,6 +10,12 @@
   position: relative;
   overflow: hidden;
 }
+.containerTitleImage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
 .particlesCanvas {
   position: absolute;
@@ -34,12 +40,11 @@
 .textContainer {
   text-align: center;
   max-width: 800px;
-  order: 3;
 }
 
 .preTitle {
   color: #00ffff;
-  order: 1;
+
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -47,6 +52,8 @@
   letter-spacing: 3px;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
 }
+
+
 
 .title {
   font-size: 4rem;
@@ -152,7 +159,6 @@
 }
 
 .imageContainer {
-  order: 2;
   position: relative;
   width: 280px;
   height: 280px;
@@ -327,7 +333,9 @@
   .imageContainer {
     width: 300px;
     height: 300px;
+
   }
+
 }
 
 /* Mobile Styles */
@@ -337,7 +345,6 @@
   }
   
   .preTitle {
-
     font-size:1.5rem;
   }
   
@@ -369,4 +376,12 @@
     top: -25px;
     left: -25px;
   }
+
+  .containerTitleImage{
+    order: -1;
+  }
+  .textContainer {
+    order: 3;
+  }
+
 }
