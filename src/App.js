@@ -30,7 +30,7 @@ function App() {
           position: 'fixed',
           top: '1rem',
           right: '1rem',
-          zIndex: 999,
+          // zIndex: 999,
         }}
       >
         {/* Switch Button */}
