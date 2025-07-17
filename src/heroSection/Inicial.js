@@ -62,14 +62,7 @@ const HeroSection = () => {
       </div>
       
       <div className={styles.contentWrapper}>
-        <motion.h3 
-          className={styles.preTitle}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          Desenvolvedor de Sites de Alta Performance
-        </motion.h3>
+
         
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -117,26 +110,33 @@ const HeroSection = () => {
               Quero um site profissional
             </motion.a>
             
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#portfolio"
-              className={styles.buttonSecondary}
-            >
-              Ver meus projetos
-            </motion.a>
+
           </div>
         </motion.div>
-        
-        <motion.div
-          className={styles.imageContainer}
-          // ... (animações permanecem iguais)
-        >
-          <img src="/rafa.jpg" alt="Rafael Steffens" className={styles.avatar} />
-          <div className={styles.imageGlow}></div>
-          
 
-        </motion.div>
+        <div className={styles.containerTitleImage}>
+          <motion.h3 
+            className={styles.preTitle}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Desenvolvedor de Sites de Alta Performance
+          </motion.h3>
+          
+          <motion.div
+            className={styles.imageContainer}
+            // ... (animações permanecem iguais)
+          >
+            
+            <img src="/rafa.jpg" alt="Rafael Steffens" className={styles.avatar} />
+            <div className={styles.imageGlow}></div>
+            
+
+          </motion.div>
+
+        </div>
+
       </div>
       
       <div className={styles.scrollIndicator}>

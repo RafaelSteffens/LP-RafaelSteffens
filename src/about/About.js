@@ -28,7 +28,7 @@ function About() {
             </ul>
 
             <div className={styles.truthBox}>
-              <p>📉 <strong>A verdade é simples:</strong> Se seu site não passa confiança, você está deixando dinheiro na mesa.</p>
+              <p><strong>A verdade é simples:</strong> Se seu site não passa confiança, você está deixando dinheiro na mesa.</p>
             </div>
 
             <p className={styles.description}>

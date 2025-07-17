@@ -309,7 +309,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .aboutContainer {
     padding: 1.5rem;
   }
@@ -321,4 +321,12 @@
   .featureCard {
     padding: 1.5rem;
   }
+  .truthBox p {
+  font-size: 1rem;
+  }
+  .ctaBox h2 {
+  font-size: 1.3rem;
+
+}
+
 }
