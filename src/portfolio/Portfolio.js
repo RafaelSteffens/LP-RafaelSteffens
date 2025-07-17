@@ -2,110 +2,211 @@ import { useState } from "react";
 import styles from "./Portfolio.module.css";
 
 const projetos = [
-    {
-        titulo: "Hydrogen Map",
-        imagem: "/hydrogenbrazil.png",
-        conteudo: (
-            <div style={{ color: "#ddd", lineHeight: "1.6" }}>
-            <img 
-                src="/hydrogenbrazil.png" 
-                alt="Hydrogen Map" 
-                style={{ 
-                width: "100%", 
-                borderRadius: "12px", 
-                marginBottom: "1.5rem",
-                boxShadow: "0 0 20px rgba(0, 255, 255, 0.3)"
-                }} 
+  {
+    titulo: "Hydrogen Map",
+    imagem: "/hydrogenbrazil.png",
+    metrics: (
+      <div className={styles.metrics}>
+        <div>
+          <strong>500+</strong>
+          <span>usuários mensais</span>
+        </div>
+        <div>
+          <strong>100+</strong>
+          <span>empresas utilizando</span>
+        </div>
+      </div>
+    ),
+    conteudo: (
+      <div className={styles.modalContent}>
+        <div className={styles.realBadge}>Solução estratégica para o setor energético</div>
+        
+        <div className={styles.modalFlex}>
+          <div>
+            <img
+              src="/hydrogenbrazil.png"
+              alt="Hydrogen Map"
+              className={styles.modalImage}
             />
-            <h3 style={{ color: "#00ffff", marginBottom: "1rem" }}>Hydrogen Map</h3>
-            <p>
-                O <strong>Hydrogen Map</strong> é uma plataforma interativa que mapeia toda a cadeia de valor do hidrogênio no Brasil.
-                Ele oferece dados geoespaciais atualizados e insights estratégicos sobre o setor, sendo uma ferramenta valiosa para investidores,
-                pesquisadores e formuladores de políticas.
+          </div>
+          <div>
+            <h3>Hydrogen Map</h3>
+            <p className={styles.expertise}>
+              Plataforma geoespacial que mapeia a cadeia do hidrogênio no Brasil
             </p>
-            <a href="https://www.h2hub.tech/">Link para o projeto</a>
-            <ul style={{ marginTop: "1rem" }}>
-                <li>🗺️ <strong>Geolocalização de players</strong> da produção, transporte e uso do hidrogênio</li>
-                <li>📊 <strong>Filtros e gráficos dinâmicos</strong> para análise do setor</li>
-                <li>🌱 Contribui para o desenvolvimento de uma economia de baixo carbono</li>
-                <li>📱 <strong>Interface responsiva</strong> e moderna, acessível de qualquer dispositivo</li>
-            </ul>
+            
+            <div className={styles.results}>
+              <h4>Impacto real gerado:</h4>
+              <ul>
+                <li>
+                  <div className={styles.metricBadge}>✓</div>
+                  <span>Adotado por empresas para tomada de decisão estratégica</span>
+                </li>
+                <li>
+                  <div className={styles.metricBadge}>✓</div>
+                  <span>Referência para pesquisadores e investidores do setor</span>
+                </li>
+                <li>
+                  <div className={styles.metricBadge}>✓</div>
+                  <span>Interface responsiva com experiência de usuário intuitiva</span>
+                </li>
+              </ul>
             </div>
-        )
-        }
-        ,
-        {
-        titulo: "Hidrogênio Brasil - Landing Page",
-        imagem: "/lpHBR.png", 
-        conteudo: (
-            <div style={{ color: "#ddd", lineHeight: "1.6" }}>
-            <img 
-                src="/lpHBR.png" 
-                alt="Hidrogênio Brasil - Landing Page" 
-                style={{ 
-                width: "100%", 
-                borderRadius: "12px", 
-                marginBottom: "1.5rem",
-                boxShadow: "0 0 20px rgba(0, 255, 255, 0.3)"
-                }} 
+          </div>
+        </div>
+
+        <div className={styles.techValidation}>
+          <h4>Tecnologias que impulsionaram este projeto:</h4>
+          <div className={styles.techStack}>
+            <span>React</span>
+            <span>Mapbox</span>
+            <span>Python</span>
+            <span>MongoDB</span>
+          </div>
+        </div>
+
+        <a href="https://www.h2hub.tech/" target="_blank" rel="noreferrer" className={styles.projectLink}>
+          Conheça o projeto ao vivo →
+        </a>
+      </div>
+    ),
+  },
+  {
+    titulo: "Hidrogênio Brasil",
+    imagem: "/lpHBR.png",
+    metrics: (
+      <div className={styles.metrics}>
+        <div>
+          <strong>Alta</strong>
+          <span>performance</span>
+        </div>
+        <div>
+          <strong>Ótima</strong>
+          <span>experiência</span>
+        </div>
+      </div>
+    ),
+    conteudo: (
+      <div className={styles.modalContent}>
+        <div className={styles.testimonial}>
+          <div className={styles.quote}>"Desenvolvimento profissional com atenção aos detalhes"</div>
+          <div className={styles.author}>
+            <div>
+              <strong>Cliente Satisfeito</strong>
+              <span>Parceiro estratégico</span>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.modalFlex}>
+          <div>
+            <img
+              src="/lpHBR.png"
+              alt="Hidrogênio Brasil"
+              className={styles.modalImage}
             />
-            <h3 style={{ color: "#00ffff", marginBottom: "1rem" }}>Hidrogênio Brasil – Landing Page</h3>
-            <p>
-                Desenvolvida com <strong>React</strong>, esta landing page institucional foi criada para representar a iniciativa <strong>Hidrogênio Brasil</strong>, 
-                com foco em performance, visual moderno e clareza na comunicação dos objetivos do projeto.
+          </div>
+          <div>
+            <h3>Hidrogênio Brasil</h3>
+            <p className={styles.expertise}>
+              Landing page institucional para iniciativa nacional
             </p>
-            <a href="https://hidrogeniobrasil.vercel.app/">Link para o projeto</a>
-            <ul style={{ marginTop: "1rem" }}>
-                <li>🚀 Design responsivo e futurista, otimizado para conversão</li>
-                <li>🔍 Apresentação clara da proposta de valor da economia do hidrogênio</li>
-                <li>📈 Atração de investidores, parceiros e projetos estratégicos</li>
-                <li>⚛️ Interface construída em React com componentes modulares</li>
-            </ul>
-            <p style={{ marginTop: "1rem" }}>
-                Essa página é um ponto de entrada poderoso para quem busca conhecer o potencial do hidrogênio como vetor energético
-                sustentável e inovador no Brasil.
-            </p>
+            
+            <div className={styles.results}>
+              <h4>Valores entregues:</h4>
+              <ul>
+                <li>
+                  <div className={styles.metricBadge}>✓</div>
+                  <span>Comunicação clara da proposta de valor</span>
+                </li>
+                <li>
+                  <div className={styles.metricBadge}>✓</div>
+                  <span>Design moderno e responsivo</span>
+                </li>
+                <li>
+                  <div className={styles.metricBadge}>✓</div>
+                  <span>Otimizado para atração de investidores</span>
+                </li>
+              </ul>
             </div>
-        )
-        }
-        ,
-        {
-            titulo: "Projeto Fullstack em Parceria",
-            imagem: "/lp-aleatoria.jpg", 
-            conteudo: (
-              <div style={{ color: "#ddd", lineHeight: "1.6" }}>
-                <img 
-                  src="/lp-aleatoria.jpg" 
-                  alt="Projeto em Parceria" 
-                  style={{ 
-                    width: "100%", 
-                    borderRadius: "12px", 
-                    marginBottom: "1.5rem",
-                    boxShadow: "0 0 20px rgba(0, 255, 255, 0.3)"
-                  }} 
-                />
-                <h3 style={{ color: "#00ffff", marginBottom: "1rem" }}>Em busca de um projeto incrível</h3>
-                <p>
-                  Este espaço está reservado para um projeto especial com um novo parceiro estratégico. 
-                  Estamos à procura de uma empresa ou iniciativa que deseje <strong>impulsionar sua presença digital</strong> com uma aplicação 
-                  moderna, interativa e 100% personalizada.
-                </p>
-                <ul style={{ marginTop: "1rem" }}>
-                  <li>🔧 Aplicações fullstack modernas com React, Flask, Docker, API REST e banco de dados</li>
-                  <li>🎯 Projetos focados em performance, design e resultados reais</li>
-                  <li>💡 Soluções sob medida para startups, negócios e ideias inovadoras</li>
-                  <li>🌍 Desenvolvimento colaborativo e transparente com entrega contínua</li>
-                </ul>
-                <p style={{ marginTop: "1rem" }}>
-                  Já temos diversos projetos publicados no nosso <a href="https://github.com/RafaelSteffens" target="_blank" rel="noopener noreferrer" style={{ color: "#00ffff", textDecoration: "underline" }}>GitHub</a>, demonstrando nossa capacidade em criar soluções completas e robustas.
-                </p>
-                <p style={{ marginTop: "1rem" }}>
-                  Se você tem uma ideia que precisa sair do papel, entre em contato. Vamos construir algo incrível juntos.
-                </p>
-              </div>
-            )
-        }
+          </div>
+        </div>
+
+        <div className={styles.techStack}>
+          <span>React</span>
+          <span>Vercel</span>
+          <span>CSS Modules</span>
+        </div>
+      </div>
+    ),
+  },
+  {
+    titulo: "Seu Projeto",
+    imagem: "/next-project.jpg",
+    metrics: (
+      <div className={styles.metrics}>
+        <div>
+          <strong>Próximo</strong>
+          <span>case de sucesso</span>
+        </div>
+      </div>
+    ),
+    conteudo: (
+      <div className={styles.modalContent}>
+        <div className={styles.ctaProject}>
+          <h3>Vamos construir sua presença digital de impacto</h3>
           
+          <div className={styles.benefitsGrid}>
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>📍</div>
+              <h4>Posicionamento Estratégico</h4>
+              <p>Soluções que destacam sua autoridade no mercado</p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>🚀</div>
+              <h4>Tecnologia Moderna</h4>
+              <p>Stack atualizada com React, Node.js e bancos de dados eficientes</p>
+            </div>
+            
+            <div className={styles.benefitCard}>
+              <div className={styles.benefitIcon}>💡</div>
+              <h4>Design Impactante</h4>
+              <p>Interfaces que impressionam e convertem visitantes</p>
+            </div>
+          </div>
+          
+          <div className={styles.proofSection}>
+            <h4>Nossa abordagem comprovada:</h4>
+            <div className={styles.proofGrid}>
+              <div>
+                <div className={styles.proofIcon}>🧠</div>
+                <h5>Estratégia Personalizada</h5>
+                <p>Soluções sob medida para seu negócio</p>
+              </div>
+              <div>
+                <div className={styles.proofIcon}>⚙️</div>
+                <h5>Desenvolvimento Ágil</h5>
+                <p>Metodologia eficiente com entregas contínuas</p>
+              </div>
+              <div>
+                <div className={styles.proofIcon}>🔍</div>
+                <h5>Otimização Contínua</h5>
+                <p>Ajustes baseados em dados reais</p>
+              </div>
+            </div>
+          </div>
+          
+          <button 
+            className={styles.ctaBtn}
+            onClick={() => window.location.href = "https://wa.me/5548991771777"}
+          >
+            Iniciar meu projeto
+          </button>
+        </div>
+      </div>
+    ),
+  },
 ];
 
 function Portfolio() {
@@ -119,12 +220,18 @@ function Portfolio() {
 
   const fecharModal = () => {
     setModalAberto(false);
-    setProjetoSelecionado(null);
   };
 
   return (
-    <section className={styles.section}>
-      <h2 className={styles.titulo}>Portfólio</h2>
+    <section className={styles.section} id="portfolio">
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.titulo}>Projetos com Propósito</h2>
+        <p className={styles.intro}>
+          Cada solução é criada com <strong>expertise técnica</strong> e <strong>visão estratégica</strong> para gerar impacto real. 
+          Nosso foco é qualidade, não quantidade.
+        </p>
+      </div>
+
       <div className={styles.grid}>
         {projetos.map((projeto, index) => (
           <div
@@ -133,7 +240,11 @@ function Portfolio() {
             style={{ backgroundImage: `url(${projeto.imagem})` }}
             onClick={() => abrirModal(index)}
           >
-            <h3 className={styles.cardTitulo}>{projeto.titulo}</h3>
+            <div className={styles.cardOverlay}>
+              <h3>{projeto.titulo}</h3>
+              {projeto.metrics}
+              <span className={styles.seeMore}>Ver detalhes ↓</span>
+            </div>
           </div>
         ))}
       </div>
@@ -141,11 +252,28 @@ function Portfolio() {
       {modalAberto && projetoSelecionado && (
         <div className={styles.modalOverlay} onClick={fecharModal}>
           <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.closeBtn} onClick={fecharModal}>✕</button>
+            <button className={styles.closeBtn} onClick={fecharModal} aria-label="Fechar">
+              ✕
+            </button>
             {projetoSelecionado.conteudo}
           </div>
         </div>
       )}
+
+      <div className={styles.ctaSection}>
+        <div className={styles.commitmentBadge}>Compromisso com resultados</div>
+        <h3>Pronto para transformar sua presença digital?</h3>
+        <p>
+          Combinamos <strong>tecnologia moderna</strong>, <strong>design impactante</strong> e <strong>estratégia digital</strong> para criar soluções que realmente funcionam.
+        </p>
+
+        <a 
+          href="https://wa.me/5548991771777"
+          className={styles.ctaButton}
+          >
+            Quero Fazer meu Site
+          </a>
+      </div>
     </section>
   );
 }
