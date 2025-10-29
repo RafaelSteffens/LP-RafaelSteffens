@@ -1,43 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="logo-rs.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo-rs.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>LP Rafael Steffens</title>
+    <!-- SEO base -->
+    <title>Rafael Steffens — Desenvolvimento de Sites, Apps e Automações (Web & IA)</title>
+    <meta name="description" content="Portfólio de Rafael Steffens: desenvolvimento de sites rápidos, criação de aplicativos web, integrações e automações com IA. Especialista em React, Next.js, Node, PHP/Symfony, Python/Flask, PostgreSQL, MySQL, Docker e n8n. Sites que convertem, automações que escalam seu negócio." />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://dev-rafael-steffens.vercel.app/" />
+
+    <!-- Internationalization -->
+    <link rel="alternate" hreflang="pt-BR" href="https://dev-rafael-steffens.vercel.app/" />
+    <link rel="alternate" hreflang="en" href="https://dev-rafael-steffens.vercel.app/en" />
+    <link rel="alternate" hreflang="x-default" href="https://dev-rafael-steffens.vercel.app/" />
+
+    <!-- Social / Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Rafael Steffens" />
+    <meta property="og:title" content="Desenvolvimento de Sites, Apps e Automações" />
+    <meta property="og:description" content="Sites que vendem, aplicativos sob medida e automações com IA para aumentar receita e reduzir custos." />
+    <meta property="og:url" content="https://dev-rafael-steffens.vercel.app/" />
+    <meta property="og:image" content="https://dev-rafael-steffens.vercel.app/logo-rs.png" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rafael Steffens — Sites, Apps e Automações" />
+    <meta name="twitter:description" content="Criação de sites rápidos, apps web e automações com IA. Performance, SEO e conversão." />
+    <meta name="twitter:image" content="https://dev-rafael-steffens.vercel.app/logo-rs.png" />
+
+    <!-- Keywords (opcional; hoje tem pouco peso, mas ajuda em portfólio) -->
+    <meta name="keywords" content="desenvolvimento de sites, criação de apps, automações, IA, n8n, React, Next.js, Node.js, PHP, Symfony, Python, Flask, Docker, PostgreSQL, MySQL, SEO, performance web, landing page, ecommerce, integrações API" />
+
+    <!-- PWA/Manifest e ícones existentes -->
+    <link rel="apple-touch-icon" href="logo-rs.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!-- Pré-conexões seguras (só se usar fontes/analytics; pode manter sem efeitos colaterais) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Sitemap (ajuda o Google a encontrar rápido) -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://dev-rafael-steffens.vercel.app/sitemap.xml" />
+
+    <!-- Structured Data: Organization + Services -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Rafael Steffens",
+      "url": "https://dev-rafael-steffens.vercel.app/",
+      "logo": "https://dev-rafael-steffens.vercel.app/logo-rs.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/rafael-steffens",
+        "https://www.instagram.com/rafaelsteffens_"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Rafael Steffens",
+        "jobTitle": "Desenvolvedor Web e Especialista em Automações"
+      },
+      "description": "Desenvolvimento de sites e aplicativos web de alta performance, integrações e automações com IA.",
+      "knowsAbout": [
+        "Desenvolvimento de sites",
+        "Criação de aplicativos web",
+        "Automações com IA",
+        "Integrações via API",
+        "React, Next.js, Node.js",
+        "PHP, Symfony",
+        "Python, Flask",
+        "PostgreSQL, MySQL",
+        "Docker, DevOps",
+        "n8n, Chatwoot"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite (com SearchAction se você tiver busca interna) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebSite",
+      "url":"https://dev-rafael-steffens.vercel.app/",
+      "name":"Rafael Steffens — Desenvolvimento e Automações",
+      "inLanguage":"pt-BR",
+      "potentialAction":{
+        "@type":"SearchAction",
+        "target":"https://dev-rafael-steffens.vercel.app/search?q={search_term_string}",
+        "query-input":"required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: Service + FAQ (rich results) -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"FAQPage",
+      "mainEntity":[
+        {
+          "@type":"Question",
+          "name":"Quais serviços você oferece?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Desenvolvimento de sites rápidos e otimizados para SEO, criação de aplicativos web sob medida e automações de processos com IA (n8n, integrações API, bots e fluxos)."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Para quais tecnologias você desenvolve?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"React, Next.js, Node.js, PHP/Symfony, Python/Flask, PostgreSQL, MySQL, Docker, integrações REST/GraphQL, entre outras."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Você faz automações com IA para meu negócio?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Sim. Crio fluxos de automação com IA para atendimento, captação de leads, tarefas administrativas e integrações entre sistemas, reduzindo custos e tempo operacional."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"Como iniciamos um projeto?",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"Agendamos uma conversa para entender objetivos, público e integrações necessárias. Em seguida, envio proposta com escopo, prazo e investimento."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Metatags de contato (opcional, mas útil) -->
+    <meta name="author" content="Rafael Steffens" />
+    <meta name="publisher" content="Rafael Steffens" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Analytics (substitua pela sua tag quando quiser) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
+    </script> -->
   </head>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <!-- Mantido exatamente como estava: React injeta aqui -->
   </body>
 </html>
