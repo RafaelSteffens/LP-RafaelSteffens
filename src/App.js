@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import './App.css';
 
 
-import Inicial from './heroSection/Inicial';
-import About from './about/About';
-import Conhecimentos from './conhecimentos/Conhecimentos';
-import Portfolio from './portfolio/Portfolio';
-import Contatos from './contatos/Contatos';
-import SectionWrapper from './components/SectionWrapper';
+import Inicial from './components/heroSection/Inicial';
+import About from './components/about/About';
+import Conhecimentos from './components/conhecimentos/Conhecimentos';
+import Portfolio from './components/portfolio/Portfolio';
+import Contatos from './components/contatos/Contatos';
+import SectionWrapper from './components/SectionWrapper/SectionWrapper';
 
 function App() {
 
